@@ -4,7 +4,6 @@ use std::sync::Arc;
 use serde::{Serialize, Deserialize};
 
 
-
 type Items = Vec<Item>;
 
 
@@ -29,13 +28,12 @@ impl Store {
     }
 }
 
-
 async fn add_service_list_item(
     item: Item,
     store: Store
     ) -> Result<impl warp::Reply, warp::Rejection> {
         store.service_list.write().push(Item {
-            name: String::from(item.name),// item.name, item.quantity,
+            name: String::from(item.name),
             url: String::from(item.url),
             endpoints: item.endpoints,
             authorized_roles: item.authorized_roles,
