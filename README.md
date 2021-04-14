@@ -4,3 +4,35 @@
 **ServiceR is Service registry made in Rust**
 
 Integration tests using Node and Cypress
+
+
+## Install Rust
+
+```bash
+  $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## Install Integration Test Suite 
+
+```bash
+  $ npm install
+```
+
+### Run API
+
+```bash
+  $ cd servicer
+  $ cargo run
+```
+
+### Run Test Suite (headless)
+
+```bash
+  $ npm run test
+```
+
+### Run Test Suite (Interactive)
+
+```bash
+  $ npm run cy:open
+```
